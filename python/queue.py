@@ -8,7 +8,7 @@ class Queue():
 		if self.is_full():
 			print("Queue is full")
 			return
-		self.queue.append(element)
+		self.queue.insert(0, element)
 
 	def dequeue(self):
 		if self.is_empty():
