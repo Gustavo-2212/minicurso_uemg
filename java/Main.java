@@ -15,13 +15,13 @@ class JDBC {
     private static JDBC instance;
     private static int count = 0;
 
-    public JDBC() {
+    private JDBC() {
         count++;
     }
 
     /** Lazy initialization */
     public static JDBC getInstance() {
-        instance = new JDBC();
+        if (instance == null) instance = new JDBC();
         return instance;
     }
 
